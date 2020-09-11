@@ -1,0 +1,49 @@
+Elk is an opens ource and set of components.
+
+Elk is set of tools which contains 
+Elastic serach, Log stash, Kibana, and beats.
+All togethre these components as know as ELK.
+
+
+Componats:
+> Elastic Search
+	>> Storing and seraching collected data
+	>> known as NoSQL database
+  
+> Elastic logstash
+  >> collecting and filtering data.
+  >> And send it back to Elastic search.
+	
+> Kibana
+	>> Graphical User inteface.
+	>>It is being used as a main user interface.
+  Features
+  	>> discover data by exploring it
+  	>>Analyse the data by applying diff matrix
+	  >> Visualize the data by applying different types of charts
+	  >> Manage users and Roles
+	  >> console to run Elastic serach expression
+	  >> Monitor elastic Stack using monitoring
+    
+> Beats 
+	>> Multiple lightweight data collector
+	>> Does not filter data
+	>> Much more easier than logstsh
+
+
+ELK used as: 
+>>System Performance Monitoring
+>>Log Management
+>>Application Performance Monitoring
+>>Aplication Data Analysis
+>>Security Monitoring Informing
+>>Data Visualization
+
+
+ELK installation prequisits:
+	>> Atleast 2GB RAM
+	>> 20GB storage
+	>> Java installed
+
+
+
