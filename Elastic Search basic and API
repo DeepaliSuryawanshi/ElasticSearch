@@ -1,0 +1,91 @@
+Index - collection of documents. The name is used to refere to the index while performing indexing, search, update and delete operation
+
+Type : It is logical category of the index. It is defined for documents that have a set of common fields
+
+Document - Document is a basic unit of information which can be indexed. It is expressed in JSON
+
+Shards - ELS provides the ability to subdivide the indexes into multiple pieces called shards.
+
+Replicas - EL allows you to make one or more copies of your index's shards which are called replica shards or replica.
+
+API Convensions
+
+Multiple indices
+Date Match support in index name
+Common Options
+URL based access control
+
+
+
+EL API's
+
+Doccument Api
+	> Single document api
+	> multi document api
+Search
+Aggregation 
+Index
+Cluster
+
+
+Document API -CRUD opeartion 
+1. create document
+
+PUT /Songplay/song/1
+{
+	"Title": "Dil",
+	"Artis": "SS",
+	"Album": "dil"
+	"Year" : 2020
+}
+
+2. Get documnet
+ get /songplay/song/7
+
+3. Update API
+
+PUT /Songplay/song/1
+{
+	"Title": "Dil",
+	"Artis": "SS",
+	"Album": "dil"
+	"Year" : 2019
+}
+
+3. Delete Document
+ delete  /Songplay/song/1
+
+
+Serach API
+1. Multi index 
+2.Multi Type
+3. URI search
+
+
+Agrregation:
+It collects all the data which is slected by search query. 
+This framework consist of building blocks called aggregators, which help in building complex summaries of the data.
+
+Aggregation - Types:
+Bucketing
+Metric
+Matrix and Pipeline.
+
+
+Get search
+{
+	"query":{
+	 "match":{
+	   "title": "dil"
+	}
+	}
+}
+}
+
+
+Cluster API:
+is used for getting information about clusters and its nodes and making changes in them
+1. Cluster health, state, stats, Pending cluster task, Reroute, Node stats, node hot_thread
+
+GET _cluster/health
+
