@@ -1,0 +1,32 @@
+A search request searching for the word ‘crime’ limited to documents with year == 1962.
+
+curl -XPOST "https://localhost:9200/movies/_search" -d'
+ {
+ "query": {
+ "filtered": {
+ "query": {
+ "query_string": {
+ "query": "crime"
+ }
+ },
+ "filter": {
+ "term": { "year": 1962 }
+       }
+     }
+   }
+ }'
+
+Search request that only filters by year == 1962.
+curl -XPOST "https://localhost:9200/movies/_search" -d'
+ {
+ "query": {
+ "filtered": {
+ "query": {
+ "match_all": {}
+ },
+ "filter": {
+ "term": { "year": 1962 }
+       }
+     }
+   }
+ }'
